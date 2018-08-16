@@ -13,36 +13,47 @@
 
 1.  [Abstract](#abstract)
 2.  [Motivation](#motivation)
-3.  [Conventions](#conventions)
-4.  [Copyright](#copyright)
+3.  [MNO Poll](#mno-poll)
+4.  [RFP System](#rfp-system)
+5.  [Approval and Implementation](#approval-and-implementation)
+6.  [Copyright](#copyright)
 
 ## Abstract
 
-This DIP introduces new `gobject` types. The first, `type: 2` (2 Dash Fee), is a PURE governance proposal, in which you could poll MNO and get a consensus with a slightly lower barrier to entry than today. The second, `type: 3` (1 Dash Fee), is a novel new `gobject` type that is part of a larger goal of delivering a Treasury system that increases competition among contractors in order to get a stronger free market (needs competition), and only funds projects that MNO have prioritized. 
+This DIP introduces new `gobject` types. The first, `type: 2` (2 Dash Fee), is an 'MNO poll', in which you could poll MNO and get a consensus with a slightly lower barrier to entry than today. The second, `type: 3` (1 Dash Fee), is a novel new `gobject` type that is part of a larger goal of delivering a Treasury system that improves efficiency with funding by enabling a free market with competition between potential contractors, as well as funding projects that MNO have prioritized rather than just whatever gets submitted each month.
 
 ## Motivation
 
 While developing Dash Nexus we came to the conclusion that in order to support further improvements to governance and funding inside of the Dash ecosystem, we need to improve the underlying protocol. This is the first of many steps on that journey and requires some fundamental changes to the `gobject` code which would implement additional Governance Object types, enabling the system to further scale and support a wider range of governance operations and ultimately increase efficiency for MNO evaluation, improve verbosity inside of the somewhat opaque Governance system, and ultimately increase the capabilities of Decentralized Governance By Blockchain.
 
+
+## MNO Polls
+
+There's a lack of good mechanisms for getting feedback from MNO on decisions around protocol changes and organizational decision-making that can be simplified and better scaled by the introduction of a Governance Objects designed purely with getting an MNO conesus on non-funding topics.
+
+The lifecycle on MNO pools should be two weeks, rather than the usual 30 Days, in order to 
+
+???
+
+How to achieve finality and store results on the blockchain. Could be done either with `OP_RETURN` (no great), or potentially by taking advantage of the `revision` field in `gobjects`.
+
+
 ## RFP System
 
-* `0x20000000` is the bit sequence `00100000000000000000000000000000` and is the current version of dash blocks.
-* `0x20000002` is the version used to signal acceptance of a consensus change rule.
-A miner should use this version to signal acceptance of the miner and the masternode for the block of a consensus rule change.
-* We use `%` as it is used in C++. It is the remainder on division. So `7 % 3` is 7 modulo 3 and is equal to 1.
+The RFP system has a number of components and will need to be supported by both the protocol back-end as well as with some new front-end interfaces on Dash Nexus.
+
+RFP Flow:
+
+1. User has an idea for something they think would improve the network
+2. User thinks that it's worth the 2 Dash to find out if other MNO agree
+3. User submits that idea for an RFP through Dash Nexus which wraps up the `gobject prepare` and `gobject submit` commands within its slick interface
+4. MNO's vote YES and NO on the currently valid RFPs
+5. The top-ranked RFPs are selected for 
 
 
-## Consensus Protocol Changes
+## Approval and Implementation
 
-Currently there is a protocol rule as follows:
-* A block over 1MB is invalid.
-
-To allow the network to scale we replace this rule with the two rules:
-* A block over 2MB is invalid.
-* A block with at least one transaction over 100kB is invalid.
-
-Note the 100kB cap on transaction size will not necessarily be satisfied by old blocks.
-For this reason this new rule must only be enforced on blocks after activation of the protocol change.
+Prior to merging any code for this into the `master` branch. A governance proposal should be submitted to the network and must reach the minimum quorum before these changes to critical governance functionality are approved by the key stakeholders.
 
 
 ## Copyright
