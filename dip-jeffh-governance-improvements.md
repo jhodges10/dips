@@ -51,6 +51,15 @@ RFP Flow:
 7. 
 
 
+## Modified Trigger Gobjects
+
+Both the RFP system and the MNO Polls require a small modification to the `trigger` object type (or introduction of a new one) in order to enable the functionality required for MNO Polls and RFPs.
+
+
+TODO:
+Look into the trigger gobject to see if all the fields are required or not, for example we don't need a payment address or payment amount. We also don't want to prune them or even really have Sentinel interact with them except in terms of providng the consensus mechanism for finality and deterministic creation of the `trigger` object.
+
+
 ## Approval and Implementation
 
 Prior to merging any code for this into the `master` branch. A governance proposal should be submitted to the network and must reach the minimum quorum before these changes to critical governance functionality are approved by the key stakeholders.
