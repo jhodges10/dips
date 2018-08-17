@@ -47,8 +47,9 @@ RFP Flow:
 1. User has an idea for something they think would improve the network
 2. User thinks that it's worth the 2 Dash to find out if other MNO agree
 3. User submits that idea for an RFP through Dash Nexus which wraps up the `gobject prepare` and `gobject submit` commands within its slick interface
-4. MNO's vote YES and NO on the currently valid RFPs
-5. The top-ranked RFPs are selected for 
+4. MNO's vote YES and NO on the currently valid RFPs to rank their importance
+5. The top-ranked RFPs are automatically moved into the next phase of the RFP flow
+6. 
 
 
 ## Approval and Implementation
