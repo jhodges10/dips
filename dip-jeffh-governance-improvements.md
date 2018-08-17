@@ -31,11 +31,9 @@ While developing Dash Nexus we came to the conclusion that in order to support f
 
 There's a lack of good mechanisms for getting feedback from MNO on decisions around protocol changes and organizational decision-making that can be simplified and better scaled by the introduction of a Governance Objects designed purely with getting an MNO conesus on non-funding topics.
 
-The lifecycle on MNO pools should be two weeks, rather than the usual 30 Days, in order to 
+The lifecycle on MNO pools should be set to two weeks (8,308 blocks), rather than the usual 30 Days, in order to achieve a more rapid consensus.
 
-???
-
-How to achieve finality and store results on the blockchain. Could be done either with `OP_RETURN` (no great), or potentially by taking advantage of the `revision` field in `gobjects`.
+We propose introducing another `trigger`-like `gobject` for handling finality and consensus here. (Can be much improved with DashDrive)
 
 
 ## RFP System
@@ -48,8 +46,8 @@ RFP Flow:
 2. User thinks that it's worth the 2 Dash to find out if other MNO agree
 3. User submits that idea for an RFP through Dash Nexus which wraps up the `gobject prepare` and `gobject submit` commands within its slick interface
 4. MNO's vote YES and NO on the currently valid RFPs to rank their importance
-5. The top-ranked RFPs are automatically moved into the next phase of the RFP flow
-6. In this phase, new `gobject` of `type` 6 are submitted which reference the RFP `gobject` as a parent object. Only proposals with a currently valid (in the correct phase)parent `gobject` are valid and accepted.
+5. The top-ranked RFPs are added to a new `trigger`-like `gobject` which is purely for the sake of finality and consensus. There could be multiple active triggers at once since it's probably easiser to generate one for each `gobject` above the threshold which preserves its validity beyond the current voting tally. (Can be much improved with DashDrive)
+6. In this phase, new `gobject` of `type` 6 are submitted which reference the RFP `gobject` as a parent object. Only proposals with a currently valid parent `gobject trigger` are valid and accepted.
 7. 
 
 
