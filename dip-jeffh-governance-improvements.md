@@ -20,11 +20,11 @@
 
 ## Abstract
 
-This DIP introduces new `gobject` types. The first, `type: 4` (2 Dash Fee), is an 'MNO poll', in which you could poll MNO and get a consensus with a slightly lower barrier to entry than today. The second, `type: 5` (1 Dash Fee), is a novel new `gobject` type that is part of a larger goal of delivering a Treasury system that improves efficiency with funding by enabling a free market with competition between potential contractors, as well as funding projects that MNO have prioritized rather than just whatever gets submitted each month.
+This DIP introduces new `gobject` types. The first, `type: 4` (2 Dash submission Fee), is an 'MNO poll', in which you could poll MNO and get a consensus with a slightly lower barrier to entry than today. The second, `type: 5` (1 Dash submission Fee), is a novel new `gobject` type that is part of a larger goal of delivering a Treasury system that improves efficiency with funding by enabling a free market with competition between potential contractors, as well as funding projects that MNO have prioritized rather than just whatever gets submitted each month.
 
 ## Motivation
 
-While developing Dash Nexus we came to the conclusion that in order to support further improvements to governance and funding inside of the Dash ecosystem, we need to improve the underlying protocol. This is the first of many steps on that journey and requires some fundamental changes to the `gobject` code which would implement additional Governance Object types, enabling the system to further scale and support a wider range of governance operations and ultimately increase efficiency for MNO evaluation, improve verbosity inside of the somewhat opaque Governance system, and ultimately increase the capabilities of Decentralized Governance By Blockchain.
+While developing Dash Nexus we came to the conclusion that in order to support further improvements to governance and funding inside of the Dash ecosystem, we need to improve the underlying protocol. This is the first of many steps on that journey and requires some changes to the `gobject` code which would implement additional Governance Object types, enabling the system to further scale and support a wider range of governance operations and ultimately increase efficiency for MNO evaluation, improve verbosity inside of the somewhat opaque Governance system, and ultimately increase the capabilities of Decentralized Governance By Blockchain.
 
 
 ## MNO Polls
@@ -49,7 +49,8 @@ RFP Flow:
 3. User submits that idea for an RFP through Dash Nexus which wraps up the `gobject prepare` and `gobject submit` commands within its slick interface
 4. MNO's vote YES and NO on the currently valid RFPs to rank their importance
 5. The top-ranked RFPs are automatically moved into the next phase of the RFP flow
-6. 
+6. In this phase, new `gobject` of `type` 6 are submitted which reference the RFP `gobject` as a parent object. Only proposals with a currently valid (in the correct phase)parent `gobject` are valid and accepted.
+7. 
 
 
 ## Approval and Implementation
