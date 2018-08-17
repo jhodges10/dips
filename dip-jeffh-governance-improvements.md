@@ -20,7 +20,7 @@
 
 ## Abstract
 
-This DIP introduces new `gobject` types. The first, `type: 2` (2 Dash Fee), is an 'MNO poll', in which you could poll MNO and get a consensus with a slightly lower barrier to entry than today. The second, `type: 3` (1 Dash Fee), is a novel new `gobject` type that is part of a larger goal of delivering a Treasury system that improves efficiency with funding by enabling a free market with competition between potential contractors, as well as funding projects that MNO have prioritized rather than just whatever gets submitted each month.
+This DIP introduces new `gobject` types. The first, `type: 4` (2 Dash Fee), is an 'MNO poll', in which you could poll MNO and get a consensus with a slightly lower barrier to entry than today. The second, `type: 5` (1 Dash Fee), is a novel new `gobject` type that is part of a larger goal of delivering a Treasury system that improves efficiency with funding by enabling a free market with competition between potential contractors, as well as funding projects that MNO have prioritized rather than just whatever gets submitted each month.
 
 ## Motivation
 
