@@ -1,7 +1,7 @@
 <pre>
   DIP: 00XX
   Title: Extended Governance Object Types
-  Author: Jeff Hodges <jeff@jeffhq.com>;
+  Author: Jeff Hodges &lt;jeff@jeffhq.com&gt;
   Comments-Summary: No comments yet.
   Status: Draft
   Type: Standard
