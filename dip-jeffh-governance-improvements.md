@@ -13,7 +13,7 @@
 
 1.  [Abstract](#abstract)
 2.  [Motivation](#motivation)
-3.  [MNO Polls (Referendum?)](#mno-poll)
+3.  [MNO Polls](#mno-polls)
 4.  [RFP System](#rfp-system)
 5.  [Modified Trigger Gobjects](#modified-trigger-gobjects)
 5.  [Approval and Implementation](#approval-and-implementation)
@@ -28,11 +28,23 @@ This DIP introduces new `gobject` types. The first, `type: 4` (2 Dash submission
 While developing Dash Nexus we came to the conclusion that in order to support further improvements to governance and funding inside of the Dash ecosystem, we need to improve the underlying protocol. This is the first of many steps on that journey and requires some changes to the `gobject` code which would implement additional Governance Object types, enabling the system to further scale and support a wider range of governance operations and ultimately increase efficiency for MNO evaluation, improve verbosity inside of the somewhat opaque Governance system, and ultimately increase the capabilities of Decentralized Governance By Blockchain.
 
 
-## MNO Polls (Referendum?)
+## MNO Polls
+
+(Could also call them Non-Binding Referendums)
 
 There's a lack of good mechanisms for getting feedback from MNO on decisions around protocol changes and organizational decision-making that can be simplified and better scaled by the introduction of a Governance Objects designed purely with getting an MNO conesus on non-funding topics.
 
-The lifecycle on MNO pools should be set to two weeks (8,308 blocks), rather than the usual 30 Days, in order to arrive at consensus around key issues much more rapidly.
+The lifecycle on MNO polls should be set to two weeks (8,308 blocks), rather than the usual 30 Days, in order to arrive at consensus around key issues much more rapidly.
+
+# Spam Reduction Option 1
+
+One way to keep spam to a minimum here is charging 2 Dash for the submission of a MNO Poll. This would allow anyone to submit a proposal but it may not be enough of a deterrent to prevent bad actors from trolling the system.
+
+# Spam Reduction Option 2
+
+Another suggestion I received was to require that a new MNO Poll `gobject` used the parent hash from a proposal which had passed in a previous cycle. This would limit the number of individuals who could poll the network, but it would also do a great job of preventing spam because only "trusted" contractors could submit questions.
+
+# How to achieve finality?
 
 We propose introducing another `trigger`-like `gobject` for handling finality and consensus here. (Can be much improved with DashDrive)
 
