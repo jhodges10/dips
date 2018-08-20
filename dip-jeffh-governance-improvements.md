@@ -1,5 +1,5 @@
 <pre>
-  DIP: 000?
+  DIP: 00XX
   Title: Extended Governance Object Types
   Author: Jeff Hodges &lt;jeff@jeffhq.com&gt;
   Comments-Summary: No comments yet.
@@ -50,6 +50,12 @@ RFP Flow:
 5. The top-ranked RFPs are added to a new `trigger`-like `gobject` which is purely for the sake of finality and consensus. There could be multiple active triggers at once since it's probably easiser to generate one for each `gobject` above the threshold which preserves its validity beyond the current voting tally. (Can be much improved with DashDrive)
 6. Potential contractors begin to submit proposals of `type` 6  which reference the RFP `gobject` as a parent object. Only proposals represented within a currently valid parent `gobject trigger` are valid and accepted.
 7. Masternodes vote on the different `type` 6 `gobjects` and whichever one ends up with the most votes is selected for funding in a special `trigger` and subsequently, a special `superblock`.
+8. Sentinel then begins marking that RFP as expired because the RFP loop has been closed. It also begins marking the additional `type` 6 `gobjects` as expired and begins purging their votes.
+9. Project is completed with the best possible outcome.
+
+
+TODO:
+Think about how Escrow would fit into this.
 
 
 ## Modified Trigger Gobjects
