@@ -36,15 +36,15 @@ There's a lack of good mechanisms for getting feedback from MNO on decisions aro
 
 The lifecycle on MNO polls should be set to two weeks (8,308 blocks), rather than the usual 30 Days, in order to arrive at consensus around key issues much more rapidly.
 
-# Spam Reduction Option 1
+### Spam Reduction Option 1
 
 One way to keep spam to a minimum here is charging 2 Dash for the submission of a MNO Poll. This would allow anyone to submit a proposal but it may not be enough of a deterrent to prevent bad actors from trolling the system.
 
-# Spam Reduction Option 2
+### Spam Reduction Option 2
 
 Another suggestion I received was to require that a new MNO Poll `gobject` used the parent hash from a proposal which had passed in a previous cycle. This would limit the number of individuals who could poll the network, but it would also do a great job of preventing spam because only "trusted" contractors could submit questions.
 
-# How to achieve finality?
+### How to achieve finality?
 
 We propose introducing another `trigger`-like `gobject` for handling finality and consensus here. (Can be much improved with DashDrive)
 
