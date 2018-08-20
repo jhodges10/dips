@@ -86,6 +86,6 @@ Prior to merging any code for this into the `master` branch. A governance propos
 
 ## Copyright
 
-Copyright (c) 2018 Jeff Hodges. [Licsensed under MIT License](https://opensource.org/licenses/MIT)
+Copyright (c) 2018 Jeff Hodges. [Licensed under MIT License](https://opensource.org/licenses/MIT)
 
 Copyright (c) 2017 Dash Core Team.  [Licensed under MIT License](https://opensource.org/licenses/MIT)
