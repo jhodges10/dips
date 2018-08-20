@@ -13,8 +13,9 @@
 
 1.  [Abstract](#abstract)
 2.  [Motivation](#motivation)
-3.  [MNO Poll](#mno-poll)
+3.  [MNO Polls (Referendum?)](#mno-poll)
 4.  [RFP System](#rfp-system)
+5.  [Modified Trigger Gobjects](#modified-trigger-gobjects)
 5.  [Approval and Implementation](#approval-and-implementation)
 6.  [Copyright](#copyright)
 
@@ -27,11 +28,11 @@ This DIP introduces new `gobject` types. The first, `type: 4` (2 Dash submission
 While developing Dash Nexus we came to the conclusion that in order to support further improvements to governance and funding inside of the Dash ecosystem, we need to improve the underlying protocol. This is the first of many steps on that journey and requires some changes to the `gobject` code which would implement additional Governance Object types, enabling the system to further scale and support a wider range of governance operations and ultimately increase efficiency for MNO evaluation, improve verbosity inside of the somewhat opaque Governance system, and ultimately increase the capabilities of Decentralized Governance By Blockchain.
 
 
-## MNO Polls
+## MNO Polls (Referendum?)
 
 There's a lack of good mechanisms for getting feedback from MNO on decisions around protocol changes and organizational decision-making that can be simplified and better scaled by the introduction of a Governance Objects designed purely with getting an MNO conesus on non-funding topics.
 
-The lifecycle on MNO pools should be set to two weeks (8,308 blocks), rather than the usual 30 Days, in order to achieve a more rapid consensus.
+The lifecycle on MNO pools should be set to two weeks (8,308 blocks), rather than the usual 30 Days, in order to arrive at consensus around key issues much more rapidly.
 
 We propose introducing another `trigger`-like `gobject` for handling finality and consensus here. (Can be much improved with DashDrive)
 
@@ -47,8 +48,8 @@ RFP Flow:
 3. User submits that idea for an RFP through Dash Nexus which wraps up the `gobject prepare` and `gobject submit` commands within its slick interface
 4. MNO's vote YES and NO on the currently valid RFPs to rank their importance
 5. The top-ranked RFPs are added to a new `trigger`-like `gobject` which is purely for the sake of finality and consensus. There could be multiple active triggers at once since it's probably easiser to generate one for each `gobject` above the threshold which preserves its validity beyond the current voting tally. (Can be much improved with DashDrive)
-6. In this phase, new `gobject` of `type` 6 are submitted which reference the RFP `gobject` as a parent object. Only proposals with a currently valid parent `gobject trigger` are valid and accepted.
-7. 
+6. Potential contractors begin to submit proposals of `type` 6  which reference the RFP `gobject` as a parent object. Only proposals represented within a currently valid parent `gobject trigger` are valid and accepted.
+7. Masternodes vote on the different `type` 6 `gobjects` and whichever one ends up with the most votes is selected for funding in a special `trigger` and subsequently, a special `superblock`.
 
 
 ## Modified Trigger Gobjects
@@ -67,4 +68,5 @@ Prior to merging any code for this into the `master` branch. A governance propos
 
 ## Copyright
 
+Copyright (c) 2018 Jeff Hodges. [Licsensed under MIT License](https://opensource.org/licenses/MIT)
 Copyright (c) 2017 Dash Core Team.  [Licensed under MIT License](https://opensource.org/licenses/MIT)
