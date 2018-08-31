@@ -34,8 +34,6 @@ In order to support further improvements to governance and funding inside of the
 
 There's a lack of good mechanisms for getting feedback from Masternodes on decisions around protocol changes and organizational decision-making that can be simplified and better scaled by the introduction of a Governance Object designed purely with getting a Masternode consensus on non-funding topics.
 
-The lifecycle on Masternode polls should be set to two weeks (8,308 blocks), rather than the usual 30 Days, in order to arrive at consensus around key issues more rapidly.
-
 ### Spam Reduction Option 1
 
 One way to keep spam to a minimum here is charging 2 Dash for the submission of a Masternode Poll. This would allow anyone to submit a proposal but it may not be enough of a deterrent to prevent bad actors from trolling the system.
