@@ -35,7 +35,7 @@ canonifyurls = true
 
 	# Repository
 	provider = "github"
-	repo_url = "https://github.com/dashpay/dips"
+	repo_url = "https://github.com/jhodges10/dips/tree/static-site"
 
   logo="/images/logo.png"
 	favicon = ""
