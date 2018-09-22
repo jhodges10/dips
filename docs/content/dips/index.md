@@ -1,8 +1,7 @@
 ---
 date: 2018-09-21T21:07:13+01:00
-title: Welcome to the DIP Documentation
-type: [index]
-weight: 0
+title: Welcome to the DIP Documentations
+weight: 1
 ---
 
 ## Dash Improvement Proposal Summary

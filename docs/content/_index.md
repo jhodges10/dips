@@ -1,8 +1,8 @@
 ---
 date: 2018-09-21T21:07:13+01:00
-title: Welcome to the DIP Documentation
-type: [index,page]
-weight: 10
+title: DIP Documentation
+weight: 100
+type: index
 ---
 
 ## Dash Improvement Proposals (DIPs)
