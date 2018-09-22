@@ -9,16 +9,23 @@ canonifyurls = true
 [menu]
 
   [[menu.main]]
+    identifier = "Home"
+    name = "Home"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
     identifier = "DIPS"
     name = "DIP Table"
     pre = "<i class='fa fa-heart'></i>"
     url = "/dips/"
-    weight = 0
+    weight = 20
 
-    [[menu.main]]
-      identifier = "DIP"
-      name = "DIP 001"
-      url = "/dips/dip-0001"
+  [[menu.main]]
+    identifier = "DIP"
+    name = "DIP 001"
+    url = "/dips/dip-0001"
+    weight = 30
 
 [params]
 	# General information
