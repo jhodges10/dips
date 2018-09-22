@@ -1,4 +1,3 @@
-baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Dash Improvement Proposals"
 theme = "hugo-material-docs"
