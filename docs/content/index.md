@@ -1,7 +1,7 @@
 ---
 date: 2018-09-21T21:07:13+01:00
 title: Welcome to the DIP Documentation
-type: [index]
+type: [index,page]
 weight: 10
 ---
 
