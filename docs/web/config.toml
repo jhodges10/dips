@@ -30,7 +30,7 @@ canonifyurls = true
 	provider = "github"
 	repo_url = "https://github.com/dashpay/dips"
 
-  logo="images/logo.png"
+  logo="/images/logo.png"
 	favicon = ""
 
 	permalink = "#"
