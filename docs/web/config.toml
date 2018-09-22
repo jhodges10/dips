@@ -1,4 +1,48 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Dash Improvement Proposals"
-theme = "hugo-theme-learn"
+theme = "hugo-material-docs"
+metadataformat = "toml"
+canonifyurls = true
+
+
+[menu]
+
+  [[menu.main]]
+    identifier = "DIPS"
+    name = "DIP Table"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "/dips/"
+    weight = 0
+
+    [[menu.main]]
+      identifier = "DIP"
+      name = "DIP 001"
+      url = "/dips/dip-0001"
+
+[params]
+	# General information
+	author = "Jeff Hodges"
+	description = "A material design theme for hugo blogs."
+	copyright = "Dash Core Group Inc."
+
+	# Repository
+	provider = "github"
+	repo_url = "https://github.com/dashpay/dips"
+
+  logo="images/logo.png"
+	favicon = ""
+
+	permalink = "#"
+
+  [params.palette]
+    	primary = "deep-orange"
+    	accent  = "light-blue"
+
+[privacy]
+
+  [privacy.googleAnalytics]
+    anonymizeIP = false
+    disable = false
+    respectDoNotTrack = false
+    useSessionStorage = false
