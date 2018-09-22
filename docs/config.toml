@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://dips.jeffhq.com/"
 languageCode = "en-us"
 title = "Dash Improvement Proposals"
 theme = "hugo-material-docs"
